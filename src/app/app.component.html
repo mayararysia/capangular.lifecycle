@@ -1,5 +1,28 @@
+
+<div>
+  <span changeText>{{valorStr}} funcionando perfeitamente!</span>
+</div>
+<!-- <input [(ngModel)]= "Form.id"  name="Id"> -->
+
+<h2>Life Cycle Hook</h2>
+<button (click)="toggle()">Hide/Show Child </button>
+<app-child *ngIf="displayChild" [message]="'Hello'">123</app-child>
+
+<hr>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+  <app-ciclo [valorInicial]= valor *ngIf="!deletarCiclo"></app-ciclo>
+  
+  <button (click)="mudarValor()">+</button>
+  <button (click)="destruirCiclo()">deletar</button>
+
+</form>
+  
+<hr>
+
 <p>
-   {{ valorInicial }}
+  <span>Não é possível editar o campo abaixo <br> ao colocar o mouse sobre ele,</span>
+  <br> mas ao retirá-lo, sim!
 </p>
-<app-my-component [valorInicial]="valor" *ngIf="!deletarCiclo">
-</app-my-component>
+<input [value]="valorStr" [readonly]=showOff
+    (mouseover)="exibirTexto()" 
+    (mouseout)="exibirTexto()" />
