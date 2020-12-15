@@ -1,6 +1,5 @@
-<!-- <h2>Life Cycle Hook</h2>
-<button (click)="toggle()">Hide/Show Child </button>
-<app-child *ngIf="displayChild" [message]="'Hello'"></app-child> -->
-<app-my-component [valorInicial]="valor" *ngIf="!deletarCiclo"></app-my-component>
-<button (click)="mudarValor()">Mudar Valor</button>
-<button (click)="destruirCiclo()">Deletar</button>
+<p>
+   {{ valorInicial }}
+</p>
+<app-my-component [valorInicial]="valor" *ngIf="!deletarCiclo">
+</app-my-component>

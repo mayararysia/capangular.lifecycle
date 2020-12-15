@@ -56,6 +56,18 @@ export class MyComponentComponent implements
     this.log('ngOnDestroy');
   }
 
+  valor: number = 0.0;
+
+  deletarCiclo: boolean = false;
+
+  mudarValor() {
+    this.valor++;
+  }
+
+  destruirCiclo(){
+    this.deletarCiclo = true;
+  }
+
   private log(hook: string){
     console.log(hook);
   }
